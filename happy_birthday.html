@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			background-color:#3d3d3d;
+		}
+		.text{	
+			display: flex;
+        	justify-content: center;
+       		align-items: center;
+        	height: 100vh;
+		}
+
+		#text {
+        	font-size: 50px;
+        	display: none;
+        	color: #fff;
+        	text-align: center;
+    }
+	</style>
+</head>
+<body>
+	<div class="text">
+		<pre id="text">
+Ваня
+Иван
+1+ Иван повзрослел +1
+С  Д Н Ё М  Р О Ж Е Д Е Н И Я ! ! !
+Желаю тебе
+Счастья
+Крепкого здоровья
+Всего самого-самого наилучшего
+Пусть сбудутся все твои заветные мечты🎉🎉🎉
+＼(＾▽＾)／ Хы ＼(＾▽＾)／
+УУУ
+		</pre>
+	</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<p> UM217276084HK </p>
+	<p>Это код</p>
+</body>
+	<script>
+    	var pre = document.getElementById('text'),
+        	text = pre.innerText,
+        	textSplit = text.split('\n');
+
+	    pre.innerText = 'Загрузка...'
+	    pre.style.display = 'block';
+
+    	idx = 0
+
+   		setInterval(function(){
+        
+   	    pre.innerText = textSplit[idx]
+
+        	if (idx === textSplit.length - 1) 
+            	idx = 0
+        	else
+    	        idx++;
+	    }, 1000)
+
+	</script>
+</html>
